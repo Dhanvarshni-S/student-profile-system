@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Student - Faculty</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+    <h1>Student Profiling System</h1>
+
+    <nav>
+
+        <a href="faculty-dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="students.html">
+            Students
+        </a>
+
+        <a href="add-student.html">
+            Add Student
+        </a>
+
+        <a href="#"
+           onclick="logout()">
+            Logout
+        </a>
+
+    </nav>
+
+</header>
+
+
+<div class="container">
+
+    <div class="page-title">
+
+        <h1>Faculty - Student Academic Update</h1>
+
+        <p>
+            Faculty can enter and update student CGPA.
+        </p>
+
+    </div>
+
+
+    <div id="facultyMessage"></div>
+
+
+    <div class="card">
+
+        <h2>Student Academic Information</h2>
+
+        <form id="facultyStudentForm"
+              novalidate>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Register Number *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facultyRegisterNumber"
+                        placeholder="Example: 24BCS034"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Student Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facultyStudentName"
+                        placeholder="Student name"
+                        required>
+
+                </div>
+
+
+                <!-- IMPORTANT CGPA FIELD -->
+
+                <div class="form-group">
+
+                    <label>
+                        CGPA *
+                    </label>
+
+                    <input
+                        type="number"
+                        id="facultyCgpa"
+                        placeholder="Example: 8.50"
+                        min="0"
+                        max="10"
+                        step="0.01"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Mentor Remarks
+                    </label>
+
+                    <input
+                        type="text"
+                        id="mentorRemarks"
+                        placeholder="Enter remarks">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Mentor Status
+                    </label>
+
+                    <select id="mentorStatus">
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="In Progress">
+                            In Progress
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="button-container">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Save CGPA
+
+                </button>
+
+
+                <button
+                    type="reset"
+                    class="btn btn-secondary">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    Student Profiling System - Faculty
+
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

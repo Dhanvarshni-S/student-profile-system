@@ -1,0 +1,107 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profiling System - Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-container">
+
+            <!-- Register button - TOP RIGHT -->
+            <div class="register-top">
+                <span>New Student?</span>
+                <a href="student-register.html" class="register-button">
+                    Register
+                </a>
+            </div>
+
+            <!-- Login Header -->
+            <div class="login-header">
+                <h1>Student Profiling System</h1>
+                <p>
+                    Student Academic Personal and Career Profiling System
+                </p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="loginId">Login ID</label>
+
+                    <input
+                        type="text"
+                        id="loginId"
+                        name="loginId"
+                        placeholder="Enter Login ID"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role</label>
+
+                    <select
+                        id="role"
+                        name="role"
+                        required
+                    >
+                        <option value="">Select Role</option>
+                        <option value="Student">Student</option>
+                        <option value="Faculty">Faculty</option>
+                    </select>
+                </div>
+
+                <!-- Login error -->
+                <div
+                    id="loginError"
+                    class="error-message"
+                ></div>
+
+                <!-- Login button -->
+                <div class="login-button-container">
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        Login
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Your existing JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
+```

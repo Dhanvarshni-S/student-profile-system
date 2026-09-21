@@ -1,0 +1,923 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Times New Roman", serif;
+
+    background: #f4f7fb;
+    color: #172b4d;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: "Times New Roman", serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #172b4d;
+    color: white;
+
+    padding: 22px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   PAGE CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 35px auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    font-size: 18px;
+    color: #5b6b82;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+
+    font-size: 27px;
+
+    border-bottom: 2px solid #e1e7ef;
+
+    padding-bottom: 12px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-weight: bold;
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ccd6e2;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 30px 0;
+}
+
+button,
+.btn {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 13px 25px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2563eb;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: #64748b;
+
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #475569;
+}
+
+.btn-danger {
+    background: #dc2626;
+
+    color: white;
+}
+
+.btn-success {
+    background: #16a34a;
+
+    color: white;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+.login-card {
+    width: 100%;
+
+    max-width: 550px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+.login-card h1 {
+    text-align: center;
+
+    font-size: 35px;
+}
+
+.login-card p {
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 18px;
+}
+
+.login-card .button-container {
+    margin-top: 25px;
+}
+
+.demo-login {
+    border-top: 1px solid #ddd;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    text-align: center;
+}
+
+.demo-login h3 {
+    font-size: 21px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 26px;
+
+    border-bottom: 2px solid #e1e7ef;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.input-error {
+    border: 2px solid red !important;
+
+    background: #fff5f5 !important;
+}
+
+.error-message {
+    color: red;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+    font-weight: bold;
+}
+
+.validation-message {
+    color: #991b1b;
+
+    background: #fee2e2;
+
+    border: 1px solid #ef4444;
+
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+.success-message {
+    color: #166534;
+
+    background: #dcfce7;
+
+    border: 1px solid #22c55e;
+
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 18px;
+}
+
+.stat-card p {
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    overflow-x: auto;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+th {
+    background: #172b4d;
+
+    color: white;
+
+    padding: 14px;
+
+    text-align: left;
+
+    font-size: 16px;
+}
+
+td {
+    padding: 13px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 15px;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.badge-green {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+.badge-red {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+.badge-blue {
+    background: #dbeafe;
+
+    color: #1e40af;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 50px;
+
+    background: #172b4d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    button,
+    .btn {
+        width: 100%;
+    }
+}
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 550px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   LOGIN HEADER
+========================= */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    padding-top: 20px;
+}
+
+.login-header h1 {
+    font-size: 35px;
+
+    margin: 0 0 10px;
+}
+
+.login-header p {
+    color: #64748b;
+
+    font-size: 17px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   REGISTER TOP BUTTON
+========================= */
+
+.register-top {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+}
+
+.register-top span {
+    color: #64748b;
+}
+
+.register-button {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 6px;
+
+    color: #2563eb;
+
+    background: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.register-button:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+.login-button {
+    min-width: 140px;
+
+    padding: 13px 30px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.register-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+.register-container {
+    width: 100%;
+
+    max-width: 550px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   REGISTER HEADER
+========================= */
+
+.register-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.register-header h1 {
+    font-size: 32px;
+
+    margin: 0 0 10px;
+}
+
+.register-header p {
+    color: #64748b;
+
+    font-size: 17px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   REGISTER BUTTONS
+========================= */
+
+.register-button-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.register-submit-button {
+    padding: 13px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.register-submit-button:hover {
+    background: #1d4ed8;
+}
+
+.back-login-button {
+    padding: 12px 22px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 7px;
+
+    color: #2563eb;
+
+    background: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.back-login-button:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =========================
+   REGISTER MESSAGE
+========================= */
+
+.register-message {
+    display: none;
+
+    padding: 12px;
+
+    margin-top: 15px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.register-message.success {
+    display: block;
+
+    color: #166534;
+
+    background: #dcfce7;
+
+    border: 1px solid #22c55e;
+}
+
+.register-message.error {
+    display: block;
+
+    color: #991b1b;
+
+    background: #fee2e2;
+
+    border: 1px solid #ef4444;
+}
+
+
+/* =========================
+   REGISTER RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .login-container,
+    .register-container {
+        padding: 25px;
+    }
+
+    .register-top {
+        right: 20px;
+    }
+
+    .register-top span {
+        display: none;
+    }
+
+    .register-button-container {
+        flex-direction: column;
+    }
+
+    .register-submit-button,
+    .back-login-button {
+        width: 100%;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+}

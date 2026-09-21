@@ -202,7 +202,7 @@ GET /api/health
 * Email notifications
 * Improved role-based authorization
 
-## Author
+## Authors
 
 **Ashmika K**
 B.E. Computer Science and Engineering
